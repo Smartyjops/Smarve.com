@@ -1,0 +1,2913 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smarvé - Timeless Elegance Since 1892</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600&family=Inter:wght@300;400;500;600&display=swap");
+
+      .font-playfair {
+        font-family: "Playfair Display", serif;
+      }
+      .font-crimson {
+        font-family: "Crimson Text", serif;
+      }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      .old-money-bg {
+        background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      }
+
+      .heritage-shadow {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      }
+
+      .page {
+        display: none;
+      }
+
+      .page.active {
+        display: block;
+      }
+
+      .nav-link {
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .nav-link:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #d4af37;
+      }
+
+      .heritage-card {
+        background: linear-gradient(145deg, #ffffff, #f8f8f8);
+        border: 1px solid #d1d5db;
+      }
+
+      .old-money-accent {
+        color: #d4af37;
+      }
+
+      .testimonial-card {
+        background: #f9f9f9;
+        border-left: 4px solid #d4af37;
+      }
+    </style>
+  </head>
+  <body class="font-inter old-money-bg">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-gray-700 heritage-shadow"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center">
+            <div class="font-playfair text-3xl font-bold text-yellow-400">
+              <img src="/Fox_Elegant_Cleaned.png" alt="" style="width: 150px;">
+            </div>
+            <div class="ml-3 text-xs text-gray-300 font-crimson">Smarvé</div>
+          </div>
+
+          <div class="hidden lg:flex space-x-8">
+            <a
+              href="#"
+              class="nav-link text-white hover:text-yellow-400 font-medium"
+              onclick="showPage('home')"
+              >Home</a
+            >
+            <div class="relative group">
+              <a
+                href="#"
+                class="nav-link text-white hover:text-yellow-400 font-medium"
+                >Collections</a
+              >
+              <div
+                class="absolute top-full left-0 w-48 bg-black shadow-lg border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-white hover:bg-gray-800"
+                  onclick="showPage('mens')"
+                  >Men's Collection</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-white hover:bg-gray-800"
+                  onclick="showPage('womens')"
+                  >Women's Collection</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-sm text-white hover:bg-gray-800"
+                  onclick="showPage('accessories')"
+                  >Accessories</a
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="nav-link text-white hover:text-yellow-400 font-medium"
+              onclick="showPage('tailoring')"
+              >Bespoke Tailoring</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white hover:text-yellow-400 font-medium"
+              onclick="showPage('heritage')"
+              >Our Heritage</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white hover:text-yellow-400 font-medium"
+              onclick="showPage('atelier')"
+              >The Atelier</a
+            >
+            <a
+              href="#"
+              class="nav-link text-white hover:text-yellow-400 font-medium"
+              onclick="showPage('contact')"
+              >Contact</a
+            >
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <button class="text-white hover:text-yellow-400">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </button>
+            <button class="text-white hover:text-yellow-400">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </button>
+            <button class="text-white hover:text-yellow-400">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+      <!-- Hero Section -->
+      <section class="pt-20 pb-16 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center py-20">
+            <div class="mb-6">
+              <div
+                class="inline-block p-4 bg-white rounded-full heritage-shadow mb-4"
+              >
+                <svg
+                  class="w-12 h-12 old-money-accent"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h1
+              class="font-playfair text-6xl md:text-8xl font-bold text-gray-900 mb-6"
+            >
+              Timeless
+              <span class="old-money-accent">Elegance</span>
+            </h1>
+            <p
+              class="font-crimson text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed"
+            >
+              For over a century, Smarvé has been the epitome of refined taste
+              and understated luxury. Our heritage of exceptional craftsmanship
+              meets the discerning standards of modern connoisseurs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+              <button
+                class="bg-black text-yellow-400 px-10 py-4 font-medium tracking-wide hover:bg-gray-800 transition-colors"
+              >
+                EXPLORE COLLECTIONS
+              </button>
+              <button
+                class="border-2 border-yellow-400 text-yellow-400 px-10 py-4 font-medium tracking-wide hover:bg-yellow-400 hover:text-black transition-colors"
+                onclick="showPage('tailoring')"
+              >
+                BESPOKE SERVICES
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Collections -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="font-playfair text-5xl font-bold text-gray-900 mb-4">
+              Curated Collections
+            </h2>
+            <p class="font-crimson text-gray-600 text-lg">
+              Each piece tells a story of heritage and refinement
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-8">
+            <div
+              class="heritage-card rounded-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center mb-6 mx-auto"
+              >
+                <svg
+                  class="w-10 h-10 old-money-accent"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-playfair text-2xl font-semibold text-gray-900 mb-4 text-center"
+              >
+                The Gentleman's Edit
+              </h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Impeccably tailored suits, refined shirting, and distinguished
+                accessories for the modern gentleman.
+              </p>
+              <div class="text-center">
+                <span class="old-money-accent text-xl font-semibold"
+                  >From $485</span
+                >
+                <button
+                  class="block w-full mt-4 border border-yellow-400 text-yellow-400 py-3 hover:bg-yellow-400 hover:text-black transition-colors"
+                  onclick="showPage('mens')"
+                >
+                  VIEW COLLECTION
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center mb-6 mx-auto"
+              >
+                <svg
+                  class="w-10 h-10 text-rose-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-playfair text-2xl font-semibold text-gray-900 mb-4 text-center"
+              >
+                The Lady's Wardrobe
+              </h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Sophisticated silhouettes and timeless pieces that embody grace
+                and understated luxury.
+              </p>
+              <div class="text-center">
+                <span class="old-money-accent text-xl font-semibold"
+                  >From $385</span
+                >
+                <button
+                  class="block w-full mt-4 border border-yellow-400 text-yellow-400 py-3 hover:bg-yellow-400 hover:text-black transition-colors"
+                  onclick="showPage('womens')"
+                >
+                  VIEW COLLECTION
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center mb-6 mx-auto"
+              >
+                <svg
+                  class="w-10 h-10 text-emerald-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-playfair text-2xl font-semibold text-gray-900 mb-4 text-center"
+              >
+                Heritage Accessories
+              </h3>
+              <p class="text-gray-600 mb-6 text-center">
+                Handcrafted leather goods, timepieces, and finishing touches
+                that complete the distinguished look.
+              </p>
+              <div class="text-center">
+                <span class="old-money-accent text-xl font-semibold"
+                  >From $125</span
+                >
+                <button
+                  class="block w-full mt-4 border border-yellow-400 text-yellow-400 py-3 hover:bg-yellow-400 hover:text-black transition-colors"
+                  onclick="showPage('accessories')"
+                >
+                  VIEW COLLECTION
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Heritage Banner -->
+      <section class="py-16 bg-black text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="font-playfair text-4xl font-bold mb-4 text-yellow-400">
+            A Legacy of Excellence
+          </h2>
+          <p class="font-crimson text-xl mb-8">
+            Since 1892, five generations of master craftsmen have upheld our
+            commitment to uncompromising quality and timeless style.
+          </p>
+          <button
+            class="border-2 border-yellow-400 text-yellow-400 px-8 py-3 hover:bg-yellow-400 hover:text-black transition-colors"
+            onclick="showPage('heritage')"
+          >
+            DISCOVER OUR STORY
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- MEN'S COLLECTION PAGE -->
+    <div id="mens" class="page">
+      <section class="pt-32 pb-20 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="font-playfair text-6xl font-bold text-gray-900 mb-6">
+              The Gentleman's Edit
+            </h1>
+            <p class="font-crimson text-xl text-gray-700 max-w-3xl mx-auto">
+              Discover our curated selection of impeccably tailored garments,
+              each piece crafted to embody the essence of refined masculinity
+              and timeless sophistication.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Row 1 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-gray-400 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <img src="/savile-row-jefferson-hotel.webp" alt="">
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Westminster
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Classic three-piece suit in finest wool
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$1,485</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-blue-400 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                 <img src="/OIF.webp" alt="">
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Cambridge
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Hand-finished cotton dress shirt
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$285</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-amber-600 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                 <img src="/OIF (1).webp" alt="">
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Kensington
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Double-breasted overcoat in pure cashmere
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$2,185</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-emerald-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-emerald-600 font-medium">Dinner Jacket</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Mayfair
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Black-tie dinner jacket with silk lapels
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$1,785</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-purple-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <p class="text-purple-600 font-medium">Wool Blazer</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Oxford
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Navy wool blazer with brass buttons
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$885</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-red-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-red-600 font-medium">Cashmere Sweater</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Harrow
+                </h3>
+                <p class="text-gray-600 mb-4">V-neck cashmere pullover</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$485</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-indigo-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <p class="text-indigo-600 font-medium">Wool Trousers</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Eton
+                </h3>
+                <p class="text-gray-600 mb-4">Tailored wool dress trousers</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$385</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-teal-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-teal-600 font-medium">Polo Shirt</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Wimbledon
+                </h3>
+                <p class="text-gray-600 mb-4">Pima cotton polo shirt</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$185</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-orange-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <p class="text-orange-600 font-medium">Tweed Waistcoat</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Yorkshire
+                </h3>
+                <p class="text-gray-600 mb-4">Harris tweed waistcoat</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$485</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-slate-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-slate-600 font-medium">Formal Shirt</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Windsor
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  White wing-collar evening shirt
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$325</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-cyan-100 to-cyan-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-cyan-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+<img src="/th.webp" alt="">                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Henley
+                </h3>
+                <p class="text-gray-600 mb-4">Cotton twill chino trousers</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$285</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-rose-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-rose-600 font-medium">Cardigan</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Ascot
+                </h3>
+                <p class="text-gray-600 mb-4">Merino wool button cardigan</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$385</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- WOMEN'S COLLECTION PAGE -->
+    <div id="womens" class="page">
+      <section class="pt-32 pb-20 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="font-playfair text-6xl font-bold text-gray-900 mb-6">
+              The Lady's Wardrobe
+            </h1>
+            <p class="font-crimson text-xl text-gray-700 max-w-3xl mx-auto">
+              Elegant silhouettes and refined details define our women's
+              collection, where classic sophistication meets contemporary grace.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Row 1 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-rose-400 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  <p class="text-rose-500 font-medium">Silk Blouse</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Audrey
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Hand-finished silk charmeuse blouse
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$485</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-purple-400 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <p class="text-purple-500 font-medium">Wool Dress</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Grace
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Tailored wool crepe sheath dress
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$785</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-emerald-400 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-emerald-500 font-medium">Cashmere Cardigan</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Charlotte
+                </h3>
+                <p class="text-gray-600 mb-4">Pure cashmere button cardigan</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$685</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-blue-400 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-blue-500 font-medium">Wool Blazer</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Diana
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Tailored wool blazer with silk lining
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$885</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-amber-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  <p class="text-amber-600 font-medium">Cashmere Coat</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Victoria
+                </h3>
+                <p class="text-gray-600 mb-4">Long cashmere coat with belt</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$1,985</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-indigo-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <p class="text-indigo-600 font-medium">Silk Scarf</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Elizabeth
+                </h3>
+                <p class="text-gray-600 mb-4">Hand-rolled silk square scarf</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$285</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-teal-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-teal-600 font-medium">Wool Skirt</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Catherine
+                </h3>
+                <p class="text-gray-600 mb-4">A-line wool pencil skirt</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$385</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-pink-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  <p class="text-pink-600 font-medium">Cashmere Turtleneck</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Margaret
+                </h3>
+                <p class="text-gray-600 mb-4">Fine gauge cashmere turtleneck</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$485</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-gray-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <p class="text-gray-600 font-medium">Wool Trousers</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Jacqueline
+                </h3>
+                <p class="text-gray-600 mb-4">High-waisted wool trousers</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$485</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-red-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                  <p class="text-red-600 font-medium">Evening Gown</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Sophia
+                </h3>
+                <p class="text-gray-600 mb-4">Silk crepe evening gown</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$1,485</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-yellow-600 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                  <p class="text-yellow-700 font-medium">Silk Camisole</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Isabella
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Pure silk camisole with lace trim
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$285</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="h-80 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center"
+              >
+                <div class="text-center">
+                  <svg
+                    class="w-16 h-16 text-green-500 mx-auto mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                  <p class="text-green-600 font-medium">Tweed Jacket</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-playfair text-xl font-semibold mb-2">
+                  The Beatrice
+                </h3>
+                <p class="text-gray-600 mb-4">Harris tweed riding jacket</p>
+                <div class="flex justify-between items-center">
+                  <span class="old-money-accent text-xl font-semibold"
+                    >$785</span
+                  >
+                  <button
+                    class="bg-black text-yellow-400 px-4 py-2 text-sm hover:bg-gray-800 transition-colors"
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ACCESSORIES PAGE -->
+    <div id="accessories" class="page">
+      <section class="pt-32 pb-20 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="font-playfair text-6xl font-bold text-gray-900 mb-6">
+              Heritage Accessories
+            </h1>
+            <p class="font-crimson text-xl text-gray-700 max-w-3xl mx-auto">
+              The finest details make the greatest difference. Our handcrafted
+              accessories complete your distinguished wardrobe.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Row 1 -->
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 old-money-accent"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Leather Briefcase
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Hand-stitched Italian leather
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$485</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Swiss Timepiece
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Automatic movement, sapphire crystal
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$2,485</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Silk Pocket Square
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Hand-rolled edges, classic patterns
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$125</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-red-100 to-red-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-red-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Cufflinks
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Sterling silver, mother-of-pearl
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$285</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <!-- Row 2 -->
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-purple-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Leather Wallet
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Handcrafted calfskin billfold
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$185</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-indigo-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Silk Necktie
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Pure silk with hand-finished tip
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$165</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-teal-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Leather Belt
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Full-grain leather with brass buckle
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$225</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-orange-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Dress Shoes
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Oxford brogues in finest leather
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$485</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <!-- Row 3 -->
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-pink-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Pearl Earrings
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Cultured pearls with gold setting
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$385</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-gray-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Leather Handbag
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Structured leather tote bag
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$685</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-yellow-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Cashmere Gloves
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Lined cashmere winter gloves
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$185</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-cyan-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Sunglasses
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Handcrafted acetate frames
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$285</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <!-- Row 4 -->
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-emerald-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Cashmere Scarf
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Lightweight cashmere wrap
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$285</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-rose-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Fountain Pen
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Gold-plated writing instrument
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$385</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-violet-100 to-violet-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-violet-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">
+                Jewelry Box
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Velvet-lined leather jewelry case
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$185</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+
+            <div
+              class="heritage-card rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-slate-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-lg font-semibold mb-2">Umbrella</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                Classic black umbrella with wooden handle
+              </p>
+              <span class="old-money-accent text-lg font-semibold">$125</span>
+              <button
+                class="block w-full mt-3 bg-black text-yellow-400 py-2 text-sm hover:bg-gray-800 transition-colors"
+              >
+                ADD TO CART
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- BESPOKE TAILORING PAGE -->
+    <div id="tailoring" class="page">
+      <section class="pt-32 pb-20 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="font-playfair text-6xl font-bold text-gray-900 mb-6">
+              Bespoke Tailoring
+            </h1>
+            <p class="font-crimson text-xl text-gray-700 max-w-3xl mx-auto">
+              Experience the pinnacle of sartorial excellence with our bespoke
+              tailoring services. Each garment is individually crafted to your
+              exact measurements and personal style preferences.
+            </p>
+          </div>
+
+          <!-- Services Overview -->
+          <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="heritage-card rounded-lg p-8 text-center">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  class="w-10 h-10 old-money-accent"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-2xl font-semibold mb-4">
+                Bespoke Suits
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Hand-cut and individually tailored to your exact measurements
+                with over 50 fittings points.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600 mb-6">
+                <p>• Personal consultation & design</p>
+                <p>• Premium fabric selection</p>
+                <p>• 3-4 fittings included</p>
+                <p>• 8-12 week delivery</p>
+              </div>
+              <div class="old-money-accent text-2xl font-bold mb-4">
+                From $3,500
+              </div>
+              <button
+                class="w-full bg-black text-yellow-400 py-3 hover:bg-gray-800 transition-colors"
+                onclick="bookConsultation('Bespoke Suit')"
+              >
+                BOOK CONSULTATION
+              </button>
+            </div>
+
+            <div class="heritage-card rounded-lg p-8 text-center">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  class="w-10 h-10 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-2xl font-semibold mb-4">
+                Made-to-Measure
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Refined fit based on our master patterns, adjusted to your
+                personal measurements.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600 mb-6">
+                <p>• Style consultation included</p>
+                <p>• Choice of premium fabrics</p>
+                <p>• 1-2 fittings included</p>
+                <p>• 4-6 week delivery</p>
+              </div>
+              <div class="old-money-accent text-2xl font-bold mb-4">
+                From $1,850
+              </div>
+              <button
+                class="w-full bg-black text-yellow-400 py-3 hover:bg-gray-800 transition-colors"
+                onclick="bookConsultation('Made-to-Measure')"
+              >
+                BOOK CONSULTATION
+              </button>
+            </div>
+
+            <div class="heritage-card rounded-lg p-8 text-center">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  class="w-10 h-10 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-playfair text-2xl font-semibold mb-4">
+                Alterations
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Expert alterations and repairs to ensure your garments maintain
+                their perfect fit.
+              </p>
+              <div class="space-y-2 text-sm text-gray-600 mb-6">
+                <p>• Professional assessment</p>
+                <p>• Precision alterations</p>
+                <p>• Quality guarantee</p>
+                <p>• 1-2 week turnaround</p>
+              </div>
+              <div class="old-money-accent text-2xl font-bold mb-4">
+                From $85
+              </div>
+              <button
+                class="w-full bg-black text-yellow-400 py-3 hover:bg-gray-800 transition-colors"
+                onclick="bookConsultation('Alterations')"
+              >
+                SCHEDULE SERVICE
+              </button>
+            </div>
+          </div>
+
+          <!-- The Process -->
+          <div class="bg-white rounded-lg p-12 heritage-shadow mb-16">
+            <h2 class="font-playfair text-4xl font-bold text-center mb-12">
+              The Bespoke Process
+            </h2>
+            <div class="grid md:grid-cols-4 gap-8">
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-black text-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+                >
+                  1
+                </div>
+                <h4 class="font-playfair text-xl font-semibold mb-2">
+                  Consultation
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Personal style discussion and fabric selection with our master
+                  tailor.
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-black text-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+                >
+                  2
+                </div>
+                <h4 class="font-playfair text-xl font-semibold mb-2">
+                  Measurement
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Precise measurements taken using traditional tailoring
+                  techniques.
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-black text-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+                >
+                  3
+                </div>
+                <h4 class="font-playfair text-xl font-semibold mb-2">
+                  Crafting
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Hand-cutting and construction by our skilled artisans in our
+                  atelier.
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-black text-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold"
+                >
+                  4
+                </div>
+                <h4 class="font-playfair text-xl font-semibold mb-2">
+                  Fitting
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Multiple fittings ensure perfect fit and comfort before final
+                  delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consultation Form -->
+          <div class="bg-white rounded-lg p-12 heritage-shadow">
+            <h2 class="font-playfair text-3xl font-bold text-center mb-8">
+              Book Your Consultation
+            </h2>
+            <form class="max-w-2xl mx-auto space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Service Interest</label
+                >
+                <select
+                  class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                >
+                  <option>Bespoke Suit</option>
+                  <option>Made-to-Measure</option>
+                  <option>Alterations</option>
+                  <option>General Consultation</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Preferred Date</label
+                >
+                <input
+                  type="date"
+                  class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Additional Notes</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                  placeholder="Tell us about your style preferences, occasion, or any specific requirements..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-black text-yellow-400 py-4 font-medium tracking-wide hover:bg-gray-800 transition-colors"
+              >
+                SUBMIT CONSULTATION REQUEST
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- HERITAGE PAGE -->
+    <div id="heritage" class="page">
+      <section class="pt-32 pb-20 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="font-playfair text-6xl font-bold text-gray-900 mb-6">
+              Our Heritage
+            </h1>
+            <p class="font-crimson text-xl text-gray-700 max-w-3xl mx-auto">
+              A story of five generations, unwavering dedication to
+              craftsmanship, and the timeless pursuit of sartorial excellence.
+            </p>
+          </div>
+
+          <!-- Timeline -->
+          <div class="space-y-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="heritage-card rounded-lg p-8">
+                <div class="text-center">
+                  <div
+                    class="w-24 h-24 bg-amber-900 text-white rounded-full flex items-center justify-center mx-auto mb-6"
+                  >
+                    <span class="font-playfair text-2xl font-bold">1892</span>
+                  </div>
+                  <h3 class="font-playfair text-2xl font-semibold mb-4">
+                    The Beginning
+                  </h3>
+                  <p class="text-gray-600">
+                    Founded by master tailor Edmund Smarvé in London's
+                    prestigious Savile Row, establishing a reputation for
+                    uncompromising quality and refined elegance.
+                  </p>
+                </div>
+              </div>
+              <div class="heritage-card rounded-lg p-8">
+                <div class="text-center">
+                  <div
+                    class="w-24 h-24 bg-amber-900 text-white rounded-full flex items-center justify-center mx-auto mb-6"
+                  >
+                    <span class="font-playfair text-2xl font-bold">1920</span>
+                  </div>
+                  <h3 class="font-playfair text-2xl font-semibold mb-4">
+                    Royal Recognition
+                  </h3>
+                  <p class="text-gray-600">
+                    Awarded the Royal Warrant, becoming the official tailor to
+                    the British Royal Family, cementing our position as
+                    purveyors of the finest bespoke garments.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="heritage-card rounded-lg p-8">
+                <div class="text-center">
+                  <div
+                    class="w-24 h-24 bg-amber-900 text-white rounded-full flex items-center justify-center mx-auto mb-6"
+                  >
+                    <span class="font-playfair text-2xl font-bold">1965</span>
+                  </div>
+                  <h3 class="font-playfair text-2xl font-semibold mb-4">
+                    Global Expansion
+                  </h3>
+                  <p class="text-gray-600">
+                    Opening our first international atelier in New York,
+                    bringing Savile Row craftsmanship to discerning clients
+                    across the Atlantic.
+                  </p>
+                </div>
+              </div>
+              <div class="heritage-card rounded-lg p-8">
+                <div class="text-center">
+                  <div
+                    class="w-24 h-24 bg-amber-900 text-white rounded-full flex items-center justify-center mx-auto mb-6"
+                  >
+                    <span class="font-playfair text-2xl font-bold">2024</span>
+                  </div>
+                  <h3 class="font-playfair text-2xl font-semibold mb-4">
+                    Modern Heritage
+                  </h3>
+                  <p class="text-gray-600">
+                    Today, we continue our legacy with accessible luxury,
+                    bringing five generations of expertise to a new generation
+                    of style connoisseurs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Values -->
+          <div class="mt-20 bg-white rounded-lg p-12 heritage-shadow">
+            <h2 class="font-playfair text-4xl font-bold text-center mb-12">
+              Our Values
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    class="w-8 h-8 old-money-accent"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="font-playfair text-xl font-semibold mb-2">
+                  Craftsmanship
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Every stitch, every detail reflects our commitment to
+                  perfection and traditional techniques.
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    class="w-8 h-8 text-blue-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="font-playfair text-xl font-semibold mb-2">
+                  Heritage
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Five generations of expertise, passed down through master
+                  craftsmen and artisans.
+                </p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    class="w-8 h-8 text-green-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="font-playfair text-xl font-semibold mb-2">
+                  Accessibility
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Making luxury attainable without compromising on quality or
+                  craftsmanship.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ATELIER PAGE -->
+    <div id="atelier" class="page">
+      <section class="pt-32 pb-20 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="font-playfair text-6xl font-bold text-gray-900 mb-6">
+              The Atelier
+            </h1>
+            <p class="font-crimson text-xl text-gray-700 max-w-3xl mx-auto">
+              Step inside our world-renowned atelier, where master craftsmen
+              continue the time-honored traditions of bespoke tailoring.
+            </p>
+          </div>
+
+          <!-- Atelier Features -->
+          <div class="grid lg:grid-cols-2 gap-16 mb-16">
+            <div class="heritage-card rounded-lg p-8">
+              <h2 class="font-playfair text-3xl font-bold mb-6">
+                Master Craftsmen
+              </h2>
+              <p class="text-gray-600 mb-6">
+                Our team of master tailors brings over 200 years of combined
+                experience, each trained in the traditional methods passed down
+                through generations of Savile Row artisans.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700">Hand-cutting techniques</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700"
+                    >Traditional canvas construction</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700">Hand-sewn buttonholes</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700"
+                    >Precision pressing techniques</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="heritage-card rounded-lg p-8">
+              <h2 class="font-playfair text-3xl font-bold mb-6">
+                Premium Materials
+              </h2>
+              <p class="text-gray-600 mb-6">
+                We source only the finest fabrics from the world's most
+                prestigious mills, ensuring each garment meets our exacting
+                standards for quality and luxury.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700">Holland & Sherry woolens</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700">Loro Piana cashmeres</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700">Ermenegildo Zegna silks</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-amber-900 rounded-full mr-3"></div>
+                  <span class="text-gray-700">Turnbull & Asser cottons</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visit Information -->
+          <div class="bg-white rounded-lg p-12 heritage-shadow">
+            <h2 class="font-playfair text-4xl font-bold text-center mb-8">
+              Visit Our Atelier
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 class="font-playfair text-2xl font-semibold mb-4">
+                  London Flagship
+                </h3>
+                <div class="space-y-3 text-gray-600">
+                  <p>📍 15 Savile Row, Mayfair, London W1S 3PJ</p>
+                  <p>📞 +44 20 7734 5678</p>
+                  <p>✉️ london@smarve.com</p>
+                </div>
+                <div class="mt-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">
+                    Opening Hours
+                  </h4>
+                  <div class="space-y-1 text-sm text-gray-600">
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 5:00 PM</p>
+                    <p>Sunday: By appointment only</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-playfair text-2xl font-semibold mb-4">
+                  New York Atelier
+                </h3>
+                <div class="space-y-3 text-gray-600">
+                  <p>📍 Madison Avenue, New York, NY 10022</p>
+                  <p>📞 +1 212 555 0123</p>
+                  <p>✉️ newyork@smarve.com</p>
+                </div>
+                <div class="mt-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">
+                    Opening Hours
+                  </h4>
+                  <div class="space-y-1 text-sm text-gray-600">
+                    <p>Monday - Friday: 10:00 AM - 7:00 PM</p>
+                    <p>Saturday: 10:00 AM - 6:00 PM</p>
+                    <p>Sunday: 12:00 PM - 5:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-8">
+              <button
+                class="bg-amber-900 text-white px-8 py-3 hover:bg-amber-800 transition-colors"
+                onclick="showPage('contact')"
+              >
+                SCHEDULE A VISIT
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+      <section class="pt-32 pb-20 old-money-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h1 class="font-playfair text-6xl font-bold text-gray-900 mb-6">
+              Contact Us
+            </h1>
+            <p class="font-crimson text-xl text-gray-700 max-w-3xl mx-auto">
+              We would be delighted to assist you with any inquiries about our
+              collections, services, or to arrange a personal consultation.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Contact Form -->
+            <div class="heritage-card rounded-lg p-8">
+              <h2 class="font-playfair text-3xl font-bold mb-6">
+                Get in Touch
+              </h2>
+              <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Subject</label
+                  >
+                  <select
+                    class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                  >
+                    <option>General Inquiry</option>
+                    <option>Bespoke Consultation</option>
+                    <option>Product Information</option>
+                    <option>Appointment Booking</option>
+                    <option>Customer Service</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    rows="5"
+                    class="w-full border border-gray-300 rounded px-4 py-3 focus:border-amber-900 focus:outline-none"
+                    placeholder="How may we assist you today?"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-amber-900 text-white py-4 font-medium tracking-wide hover:bg-amber-800 transition-colors"
+                >
+                  SEND MESSAGE
+                </button>
+              </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-8">
+              <div class="heritage-card rounded-lg p-8">
+                <h3 class="font-playfair text-2xl font-semibold mb-4">
+                  London Flagship
+                </h3>
+                <div class="space-y-3 text-gray-600">
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 old-money-accent"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                      />
+                    </svg>
+                    15 Savile Row, Mayfair, London W1S 3PJ
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 old-money-accent"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                      />
+                    </svg>
+                    +44 20 7734 5678
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 old-money-accent"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                      />
+                    </svg>
+                    london@smarve.com
+                  </p>
+                </div>
+              </div>
+
+              <div class="heritage-card rounded-lg p-8">
+                <h3 class="font-playfair text-2xl font-semibold mb-4">
+                  New York Atelier
+                </h3>
+                <div class="space-y-3 text-gray-600">
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 old-money-accent"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                      />
+                    </svg>
+                    Madison Avenue, New York, NY 10022
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 old-money-accent"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                      />
+                    </svg>
+                    +1 212 555 0123
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 mr-3 old-money-accent"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                      />
+                    </svg>
+                    newyork@smarve.com
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-card rounded-lg p-6">
+                <p class="font-crimson text-lg italic mb-4">
+                  "The attention to detail and personal service at Smarvé is
+                  unparalleled. Every visit feels like stepping into a world of
+                  timeless elegance."
+                </p>
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                  >
+                    JH
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-900">James Harrison</p>
+                    <p class="text-sm text-gray-600">Loyal Client Since 2018</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center mb-4">
+              <div class="font-playfair text-3xl font-bold">Smarvé</div>
+              <div class="ml-3 text-sm font-crimson">Est. 1892</div>
+            </div>
+            <p class="text-amber-100 mb-6 max-w-md font-crimson">
+              Five generations of sartorial excellence, bringing timeless
+              elegance and accessible luxury to the discerning modern wardrobe.
+            </p>
+            <div class="flex space-x-4">
+              <button
+                class="w-10 h-10 bg-amber-800 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="w-10 h-10 bg-amber-800 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="w-10 h-10 bg-amber-800 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-playfair text-lg font-semibold mb-4">
+              Collections
+            </h4>
+            <ul class="space-y-2 text-amber-100">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors"
+                  onclick="showPage('mens')"
+                  >Men's Collection</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors"
+                  onclick="showPage('womens')"
+                  >Women's Collection</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors"
+                  onclick="showPage('accessories')"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors"
+                  onclick="showPage('tailoring')"
+                  >Bespoke Services</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-playfair text-lg font-semibold mb-4">Company</h4>
+            <ul class="space-y-2 text-amber-100">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors"
+                  onclick="showPage('heritage')"
+                  >Our Heritage</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors"
+                  onclick="showPage('atelier')"
+                  >The Atelier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors"
+                  onclick="showPage('contact')"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Size Guide</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-amber-800 mt-12 pt-8 text-center text-amber-100"
+        >
+          <p class="font-crimson">
+            &copy; 2024 Smarvé. All rights reserved. Timeless elegance since
+            1892.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Page navigation
+      function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll(".page").forEach((page) => {
+          page.classList.remove("active");
+        });
+
+        // Show selected page
+        document.getElementById(pageId).classList.add("active");
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+      }
+
+      // Consultation booking
+      function bookConsultation(service) {
+        alert(
+          `Thank you for your interest in our ${service} service. Our master tailor will contact you within 24 hours to schedule your personal consultation.`
+        );
+      }
+
+      // Form submissions
+      document.addEventListener("DOMContentLoaded", function () {
+        // Handle all form submissions
+        document.querySelectorAll("form").forEach((form) => {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const formType = this.closest("#tailoring")
+              ? "consultation"
+              : "contact";
+
+            if (formType === "consultation") {
+              alert(
+                "Thank you for your consultation request. Our master tailor will contact you within 24 hours to confirm your appointment and discuss your requirements."
+              );
+            } else {
+              alert(
+                "Thank you for contacting Smarvé. We will respond to your inquiry within 24 hours."
+              );
+            }
+
+            // Reset form
+            this.reset();
+          });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll("button").forEach((button) => {
+          if (button.textContent.includes("ADD TO CART")) {
+            button.addEventListener("click", function () {
+              const productName =
+                this.closest(".heritage-card").querySelector("h3").textContent;
+              alert(
+                `${productName} has been added to your cart. Our personal shopping service will contact you to complete your order.`
+              );
+            });
+          }
+        });
+
+        // Collection buttons
+        document.querySelectorAll("button").forEach((button) => {
+          if (button.textContent.includes("VIEW COLLECTION")) {
+            button.addEventListener("click", function () {
+              const collectionName =
+                this.closest(".heritage-card").querySelector("h3").textContent;
+              alert(
+                `Welcome to ${collectionName}. Our full collection will be available soon. Subscribe to our newsletter to be notified first.`
+              );
+            });
+          }
+        });
+
+        // Main CTA buttons
+        document.querySelectorAll("button").forEach((button) => {
+          if (button.textContent.includes("EXPLORE COLLECTIONS")) {
+            button.addEventListener("click", function () {
+              showPage("mens");
+            });
+          }
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'96a06b80a7bae2c5',t:'MTc1NDMzNTMwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
